@@ -9,15 +9,19 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { MapMainComponent } from './map-main/map-main.component';
+import { GasfeedComponent } from './gasfeed/gasfeed.component';
+import { masterGasApiConfig } from './api-keys';
 
 export const googleMapsConfig = {
-  apiKey: masterGoogleMapsConfig
+  apiKey: masterGoogleMapsConfig,
+  apiKeyGas: masterGasApiConfig,
 };
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapMainComponent
+    MapMainComponent,
+    GasfeedComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,7 @@ export const googleMapsConfig = {
     HttpModule,
     routing,
     AgmCoreModule.forRoot({
-      apiKey: masterGoogleMapsConfig
+      apiKey: masterGoogleMapsConfig,
     })
   ],
   providers: [],
