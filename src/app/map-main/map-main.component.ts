@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GoogleMapsAPIWrapper } from 'angular2-google-maps/core';
+import { masterGoogleMapsConfig } from '../api-keys';
 declare var google: any;
 
 @Component({
