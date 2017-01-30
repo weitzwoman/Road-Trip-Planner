@@ -38,3 +38,6 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+#Google Maps Credentials
+/src/app/api-keys.ts
