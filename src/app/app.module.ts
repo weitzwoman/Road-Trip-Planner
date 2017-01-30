@@ -5,8 +5,10 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { masterGoogleMapsConfig} from './api-keys';
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { MapMainComponent } from './map-main/map-main.component';
 
 export const googleMapsConfig = {
   apiKey: masterGoogleMapsConfig
@@ -14,12 +16,14 @@ export const googleMapsConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapMainComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
     AgmCoreModule.forRoot({
       apiKey: masterGoogleMapsConfig
     })
