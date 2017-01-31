@@ -12,7 +12,5 @@ export class MapMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
   }
-
 }
