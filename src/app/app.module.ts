@@ -9,19 +9,19 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { MapMainComponent } from './map-main/map-main.component';
-import { GasfeedComponent } from './gasfeed/gasfeed.component';
-import { masterGasApiConfig } from './api-keys';
+// import { GasfeedComponent } from './gasfeed/gasfeed.component';
+// import { masterGasApiConfig } from './api-keys';
 
 export const googleMapsConfig = {
-  apiKey: masterGoogleMapsConfig,
-  apiKeyGas: masterGasApiConfig,
+  apiKey: masterGoogleMapsConfig
+  // apiKeyGas: masterGasApiConfig,
 };
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapMainComponent,
-    GasfeedComponent
+    MapMainComponent
+    // GasfeedComponent
   ],
   imports: [
     BrowserModule,

@@ -8,16 +8,7 @@ declare var google: any;
   styleUrls: ['./map-main.component.css']
 })
 
-// @Directive({
-//   selector: 'sebm-google-map-directions'
-// })
-
 export class MapMainComponent implements OnInit {
-  title = 'Road Trip!';
-
-
-
-
   constructor() { }
 
   ngOnInit() {
