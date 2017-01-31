@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { MapService } from '../map.service';
+import { Gas } from '../gas.model';
 
 @Component({
   selector: 'app-gasfeed',
@@ -9,15 +10,18 @@ import { MapService } from '../map.service';
   providers: [MapService]
 })
 export class GasfeedComponent implements OnInit {
-
+ results;
   constructor(private mapService: MapService) { }
-   result = this.mapService.results;
+
   ngOnInit() {
-    console.log(this.result);
+
   }
 
   getMPG(lat, long) {
-    this.mapService.showMPG(lat, long);
+    this.results = this.mapService.showMPG(lat, long).subscribe(data=>{
+      console.log(data);
+
+    });
   }
 
 }

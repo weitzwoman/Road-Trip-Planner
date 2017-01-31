@@ -44,5 +44,16 @@
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
     "typescript": "~2.0.3"
-  }
+  },
+  "description": "This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haleyswain/road-trip-planner.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/haleyswain/road-trip-planner/issues"
+  },
+  "homepage": "https://github.com/haleyswain/road-trip-planner#readme"
 }
