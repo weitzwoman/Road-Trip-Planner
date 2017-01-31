@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { MapService } from '../map.service';
 import { Gas } from '../gas.model';
+import { Response } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-gasfeed',
@@ -18,8 +20,9 @@ export class GasfeedComponent implements OnInit {
   }
 
   getMPG(lat, long) {
-    this.results = this.mapService.showMPG(lat, long).subscribe(data=>{
-      console.log(data);
+    this.results = this.mapService.showMPG(lat, long).subscribe(data => {
+      this.results = data;
+      console.log("gasfeed" + data);
 
     });
   }
