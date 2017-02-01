@@ -102,17 +102,19 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 90%; }
     .content .top .choicesBox label {
-      flex-basis: 31.3%;
-      margin: 1%;
+      flex-basis: 20.3%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center; }
+      justify-content: center;
+      overflow: visible;
+      margin-left: -100px; }
     .content .top .choicesBox div {
       flex-basis: 300px;
+      width: 300px;
       display: flex;
       flex-direction: column;
       align-content: center;
@@ -120,7 +122,13 @@ html, body {
       background-color: rgba(255, 255, 255, 0.4);
       height: 400px;
       background-position: center center;
-      background-size: cover; }
+      background-size: cover;
+      box-shadow: -5px 5px 8px #333;
+      transition: margin 400ms ease-in-out; }
+      .content .top .choicesBox div:hover {
+        box-shadow: 0px 0px 15px #fff;
+        margin-left: 110px;
+        margin-right: 110px; }
       .content .top .choicesBox div h2 {
         font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 2.5em;
@@ -129,10 +137,8 @@ html, body {
         border-bottom: 3px solid black;
         width: 90%;
         align-self: center; }
-      .content .top .choicesBox div h4 {
-        font-family: 'Josefin Sans', sans-serif; }
     .content .top .choicesBox #glacier {
-      background-image: url("https://images.unsplash.com/photo-1476468821525-c98651fc5a61?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=12f5eaa9a63acfb0573e98094952096c"); }
+      background-image: url("https://static.pexels.com/photos/193636/pexels-photo-193636.jpeg"); }
     .content .top .choicesBox #badlands {
       background-image: url("https://images.unsplash.com/photo-1464706036991-71810a1a46b1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=07ea52fe598eb45ca93de73d42d0532a"); }
     .content .top .choicesBox #yellowstone {
