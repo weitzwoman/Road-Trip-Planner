@@ -126,15 +126,42 @@ html, body {
       label {
         flex-basis: 31.3%;
         margin: 1%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       div {
-        flex-basis: 100%;
+        flex-basis: 300px;
         display: flex;
         flex-direction: column;
         align-content: center;
         list-style-type: none;
         background-color: rgba(255, 255, 255, 0.4);
-
+        height: 400px;
+        background-position: center center;
+        background-size: cover;
+        h2 {
+          font-family: 'Alegreya Sans SC', sans-serif;
+          font-size: 2.5em;
+          text-shadow: 0px 0px 3px white;
+          border-top: 3px solid black;
+          border-bottom: 3px solid black;
+          width: 90%;
+          align-self: center;
+        }
+        h4 {
+          font-family: 'Josefin Sans', sans-serif;
+        }
+      }
+      #glacier {
+        background-image: url('https://images.unsplash.com/photo-1476468821525-c98651fc5a61?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=12f5eaa9a63acfb0573e98094952096c');
+      }
+      #badlands {
+        background-image: url('https://images.unsplash.com/photo-1464706036991-71810a1a46b1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=07ea52fe598eb45ca93de73d42d0532a');
+      }
+      #yellowstone {
+        background-image: url('https://images.unsplash.com/photo-1466024760775-91c6530fc877?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=bd630e7a18a5608447926c3947d1a692');
       }
     }
   }
