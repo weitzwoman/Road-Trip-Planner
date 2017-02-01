@@ -1,0 +1,12 @@
+<p>
+  campground works!
+</p>
+
+<select #chooseSearch>
+  <option value="campgrounds" selected="selected">Campgrounds</option>
+  <option value="trailheads">Trail-Heads</option>
+</select>
+
+<input #typedInfo />
+
+<button (click)="grabParkInfoStart(chooseSearch.value, typedInfo.value)">Click Here</button>

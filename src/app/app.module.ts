@@ -9,20 +9,24 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { MapMainComponent } from './map-main/map-main.component';
 import { GasfeedComponent } from './gasfeed/gasfeed.component';
-
-
+import { CampgroundComponent } from './campground/campground.component';
+// import { masterGasApiConfig } from './api-keys';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapMainComponent,
-    GasfeedComponent
+    GasfeedComponent,
+    CampgroundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing
+    // AgmCoreModule.forRoot({
+    //   apiKey: masterGoogleMapsConfig,
+    // })
   ],
   providers: [],
   bootstrap: [AppComponent]
