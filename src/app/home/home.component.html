@@ -2,8 +2,8 @@
   <div class="top">
     <h2>GoThere</h2>
     <!-- <input placeholder="destination..."> -->
-    <div class="choicesBox">
-      <label for="">
+    <div  class="choicesBox">
+      <label (click)="showCamps(45.677064, -122.551182)" for="">
         <input type="radio" name="name" value="43.7764452,-102.1701994" hidden>
         <div class="searchTypes">
           <h2>Badlands National Park</h2>
@@ -11,7 +11,7 @@
         </div>
       </label>
 
-      <label for="">
+      <label (click)="showCamps(48.609132,-113.9933643)" for="">
         <input type="radio" name="name" value="48.609132,-113.9933643" hidden>
         <div class="searchTypes">
           <h2>Glacier National Park</h2>
@@ -19,7 +19,7 @@
         </div>
       </label>
 
-      <label for="">
+      <label (click)="showCamps(44.4897089,-110.8264368)" for="">
         <input type="radio" name="name" value="44.4897089,-110.8264368" hidden>
         <div class="searchTypes">
           <h2>Yellowstone National Park</h2>
@@ -29,8 +29,9 @@
     </div>
   </div>
   <div class="middle">
-
+    <app-campground [campgrounds]="campgrounds" (showCampsSender)="handleShowCampSender($event)"></app-campground>
   </div>
 </div>
+
 
 <app-map-main></app-map-main>

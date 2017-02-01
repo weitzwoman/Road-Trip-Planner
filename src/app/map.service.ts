@@ -11,7 +11,6 @@ import 'rxjs/add/operator/map';
 export class MapService {
   results: any;
   parkResults: any;
-  private gasUrl = 'https://ridb.recreation.gov/api/v1/facilities?latitude=43.6820289&longitude=-102.9425011&limit=5&apikey=F682E4677D1E48E88F3062C39D598A67';
   campgrounds: Campground[] = [];
 
   constructor(private http: Http) { }
@@ -20,16 +19,26 @@ export class MapService {
     return this.campgrounds;
   }
 
-  addCampground(newCampgroundItem) {
-    console.log("hi " + this.campgrounds);
-    this.campgrounds.push(newCampgroundItem);
-  }
+  loadCampgrounds(lat, long) {
 
-  showCampgrounds(lat, long) {
-    return this.http.get(this.gasUrl)
-    .map(res => {
-        console.log("service" + res.json().RECDATA[0].FacilityDescription);
-      return <any[]> res.json();
+    return this.http.get('https://ridb.recreation.gov/api/v1/facilities?latitude=' + lat  + '&longitude=' + long + '&limit=5&apikey=F682E4677D1E48E88F3062C39D598A67')
+    .map(res => res.json())
+    .subscribe(data => {
+
+      console.log(data);
+      this.results = data;
+      let newCampgrounds = [];
+      for(var i=0; i<this.results.RECDATA.length; i++){
+        let campData = this.results.RECDATA[i];
+        newCampgrounds.push(new Campground(
+          campData.FacilityName ,
+          campData.FacilityDescription,
+          campData.FacilityDirections,
+          campData.FacilityTypeDescription
+        ));
+      }
+      this.campgrounds = newCampgrounds
+      return this.campgrounds;
     });
   }
 
