@@ -13,6 +13,8 @@ import 'rxjs/add/operator/map';
 })
 export class GasfeedComponent implements OnInit {
  results;
+ newGas: Gas;
+
   constructor(private mapService: MapService) { }
 
   ngOnInit() {
@@ -22,8 +24,13 @@ export class GasfeedComponent implements OnInit {
   getMPG(lat, long) {
     this.results = this.mapService.showMPG(lat, long).subscribe(data => {
       this.results = data;
-      console.log("gasfeed" + data);
-
+      for(var i=0; i<data.length; i++) {
+        this.newGas.facilityName = this.results.RECDATA[0].FacilityName;
+        this.newGas.facilityDescription = this.results.RECDATA[0].FacilityDescription;
+        this.newGas.facilityDirections = this.results.RECDATA[0].FacilityDirections;
+        this.newGas.facilityTypeDescription = this.results.RECDATA[0].facilityTypeDescription;
+        console.log(this.newGas.facilityName);
+      };
     });
   }
 

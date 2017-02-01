@@ -1,5 +1,8 @@
-<p>
-  gasfeed works!
-</p>
+<div *ngIf="newGas">
+  <p>Name: {{newGas.facilityName}}</p>
+  <p>Type: {{newGas.facitiltyTypeDesciption}}</p>
+  <p>Description: {{newGas.facitiltyDesciption}}</p>
+  <p>Directions: {{newGas.facitiltyDirections}}</p>
+</div>
 
 <button (click)="getMPG(45.677064, -122.551182)">HI</button>
