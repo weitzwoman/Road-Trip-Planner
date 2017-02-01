@@ -8,7 +8,6 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { MapMainComponent } from './map-main/map-main.component';
-import { GasfeedComponent } from './gasfeed/gasfeed.component';
 import { CampgroundComponent } from './campground/campground.component';
 // import { masterGasApiConfig } from './api-keys';
 
@@ -16,7 +15,6 @@ import { CampgroundComponent } from './campground/campground.component';
   declarations: [
     AppComponent,
     MapMainComponent,
-    GasfeedComponent,
     CampgroundComponent
   ],
   imports: [
