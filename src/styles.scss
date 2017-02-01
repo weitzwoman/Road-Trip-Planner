@@ -1,0 +1,141 @@
+#right-panel {
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+
+#right-panel {
+  margin: 20px;
+  border-width: 2px;
+  width: 20%;
+  height: 400px;
+  float: left;
+  text-align: left;
+  padding-top: 0;
+}
+
+#directions-panel {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+@keyframes textglow {
+    0%   {text-shadow: 0px 0px 0px #334A30;}
+    45%  {text-shadow: 0px 0px 30px #F9E282;}
+    // 50%  {text-shadow: 0px 0px 30px #F9E282;}
+    // 58%  {text-shadow: 0px 0px 30px #F9E282;}
+    100% {text-shadow: 0px 0px 0px #334A30;}
+}
+
+.content {
+  .top {
+    background-image: url('https://images.unsplash.com/photo-1470074292333-06771ecb559e?dpr=2&auto=format&fit=crop&w=1199&h=1499&q=80&cs=tinysrgb&crop=');
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    & > h2 {
+      margin-bottom: 30px;
+      font-size: 8.5em;
+      font-family: 'Courgette', cursive;
+      color: rgb(53, 53, 53);
+      animation-name: textglow;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+    }
+    & > input {
+      width: 250px;
+      height: 10px;
+      padding: 20px;
+      font-size: 2em;
+      border-radius: 30px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      border-color: #fff;
+      margin-bottom: 310px;
+      &::-webkit-input-placeholder {
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+    select {
+      width: 250px;
+      // height: 10px;
+      padding: 20px;
+      font-size: 2em;
+      border-radius: 30px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      border-color: #fff;
+      margin-bottom: 310px;
+    }
+    select > option {
+      background-color: red !important;
+    }
+    textarea:focus, input:focus{
+      outline: none;
+    }
+    @media (max-width: 525px) {
+      height: 400px;
+      justify-content: flex-start;
+      h2 {
+        font-size: 5em;
+        border-top: 2px solid #353535;
+        border-bottom: 2px solid #353535;
+      }
+      input {
+        margin-bottom: 0px;
+      }
+    }
+    .choicesBox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+      label {
+        flex-basis: 31.3%;
+        margin: 1%;
+      }
+      div {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        list-style-type: none;
+        background-color: rgba(255, 255, 255, 0.4);
+
+      }
+    }
+  }
+}
