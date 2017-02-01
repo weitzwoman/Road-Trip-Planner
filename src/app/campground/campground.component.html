@@ -1,12 +1,9 @@
-<p>
-  campground works!
-</p>
 
-<select #chooseSearch>
-  <option value="campgrounds" selected="selected">Campgrounds</option>
-  <option value="trailheads">Trail-Heads</option>
-</select>
+  <div *ngFor = "let campground of campgrounds">
+    <h3 class="name">{{campground.facilityName}}</h3>
+    <p [innerHtml]="campground.facilityDescription"></p>
+    <p [innerHtml]="campground.facilityDirections"></p>
+    <br><br>
+  </div>
 
-<input #typedInfo />
-
-<button (click)="grabParkInfoStart(chooseSearch.value, typedInfo.value)">Click Here</button>
+<button (click)="showCamps(45.677064, -122.551182)">HI</button>
