@@ -110,8 +110,9 @@ html, body {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      overflow: visible;
-      margin-left: -100px; }
+      overflow: visible; }
+      .content .top .choicesBox label:not(:first-of-type) {
+        margin-left: -100px; }
     .content .top .choicesBox div {
       flex-basis: 300px;
       width: 300px;

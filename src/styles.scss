@@ -131,8 +131,9 @@ html, body {
         flex-wrap: wrap;
         justify-content: center;
         overflow: visible;
+        &:not(:first-of-type) {
         margin-left: -100px;
-
+        }
       }
       div {
         flex-basis: 300px;
