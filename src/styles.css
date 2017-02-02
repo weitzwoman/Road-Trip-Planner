@@ -113,10 +113,10 @@ html, body {
       overflow: visible;
       transition: margin 400ms ease-in-out; }
       .content .top .choicesBox label:not(:first-of-type) {
-        margin-left: -100px; }
+        margin-left: -250px; }
       .content .top .choicesBox label:hover {
         margin-left: 10px;
-        margin-right: 110px; }
+        margin-right: 250px; }
         .content .top .choicesBox label:hover div {
           box-shadow: 0px 0px 15px #fff; }
     .content .top .choicesBox div {
@@ -149,6 +149,12 @@ html, body {
       background-image: url("https://static.pexels.com/photos/25630/pexels-photo-25630.jpg"); }
     .content .top .choicesBox #rainier {
       background-image: url("http://cdn1.buuteeq.com/upload/21004/shutterstock_80423284.jpg.1920x1080_default.jpg"); }
+    .content .top .choicesBox #craterLake {
+      background-image: url("https://images.unsplash.com/photo-1476681227192-05dedd2b6709?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=66a626a7636932214290755ab3b7d8d1"); }
+    .content .top .choicesBox #olympic {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6d/Marmot_Pass,_Olympic_National_Park.jpg"); }
+    .content .top .choicesBox #teton {
+      background-image: url("https://images.unsplash.com/photo-1477425143973-7c2c58f29378?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=eeb940d98ce3942fea5248ce4fef65ce"); }
 .content .middle {
   display: flex;
   flex-direction: row;

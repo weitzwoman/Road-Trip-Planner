@@ -38,8 +38,7 @@ _Contact us on Github at [haleyswain](https://github.com/haleyswain)_
 ## Technologies Used
 
 * _HTML_
-* _CSS_
-  * _Bootstrap_
+* _SCSS_
 * _JavaScript_
   * _Typescript_
   * _NodeJS_
