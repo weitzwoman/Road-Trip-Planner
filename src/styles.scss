@@ -189,7 +189,7 @@ html, body {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-
+    transition: all 250ms ease-in-out;
     p {
       font-family: 'Josefin Sans', sans-serif;
     }

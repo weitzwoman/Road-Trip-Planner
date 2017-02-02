@@ -153,7 +153,8 @@ html, body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  transition: all 250ms ease-in-out; }
   .content .middle p {
     font-family: 'Josefin Sans', sans-serif; }
   .content .middle h3 {
