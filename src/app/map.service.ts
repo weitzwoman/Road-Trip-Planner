@@ -19,7 +19,8 @@ export class MapService {
   }
 
   loadCampgrounds(lat, long) {
-    return this.http.get('https://ridb.recreation.gov/api/v1/facilities?latitude=' + lat  + '&longitude=' + long + '&limit=5&full=true&apikey=F682E4677D1E48E88F3062C39D598A67')
+
+    return this.http.get('https://ridb.recreation.gov/api/v1/facilities?latitude=' + lat  + '&longitude=' + long + '&limit=10&apikey=F682E4677D1E48E88F3062C39D598A67')
     .map(res => res.json())
     .subscribe(data => {
       this.results = data;
