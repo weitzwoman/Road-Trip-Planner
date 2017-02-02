@@ -20,7 +20,6 @@ export class CampgroundComponent implements OnInit {
   results;
   newCampground: Campground;
 
-
   constructor(private _sanitizer: DomSanitizer, private router: Router, private mapService: MapService) { }
 
   ngOnInit() {
@@ -31,10 +30,6 @@ export class CampgroundComponent implements OnInit {
     public get htmlProperty() : SafeHtml {
        return this._sanitizer.bypassSecurityTrustHtml(this._htmlProperty);
     }
-
-
-
-
 
   showCamps(lat, long) {
     let coords = {lat: lat, long: long}
