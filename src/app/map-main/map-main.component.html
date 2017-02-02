@@ -1,33 +1,35 @@
-<div id="map"></div>
-  <div id="right-panel">
-    <h3>Road Trip Planner!</h3>
-  <div>
-  <b>Start:</b>
-  <select id="start">
-    <option value="Portland, OR">Portland, Oregon</option>
-    <option value="Seattle, WA">Seattle, WA</option>
-  </select>
-  <br>
-  <b>Waypoints:</b> <br>
-  <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
-  <select multiple id="waypoints">
-    <option value="badlands">Badlands National Park</option>
-    <option value="north cascades national park">North Cascades National Park</option>
-    <option value="Crater Lake Oregon">Crater Lake National Park</option>
-    <option value="olympic national park">Olympic National Park</option>
-    <option value="Rainier National Park">Rainier National Park</option>
-    <option value="Glacier National Park">Glacier National Park</option>
-    <option value="Yellowstone National Park">Yellowstone National Park</option>
-    <option value="Grand Teton National Park">Grand Teton National Park</option> -->
-  </select>
-  <br>
-  <b>End:</b>
-  <select id="endding">
-    <option value="Portland, OR">Portland, OR</option>
-    <option value="Seattle, WA">Seattle, WA</option>
-  </select>
-  <br>
-    <input type="submit" id="submit">
+<body>
+  <div id="map"></div>
+    <div id="right-panel">
+      <h3>Road Trip Planner!</h3>
+    <div>
+    <b>Start:</b>
+    <select id="start">
+      <option value="Portland, OR">Portland, Oregon</option>
+      <option value="Seattle, WA">Seattle, WA</option>
+    </select>
+    <br>
+    <b>Waypoints:</b> <br>
+    <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
+    <select multiple id="waypoints">
+      <option value="badlands">Badlands National Park</option>
+      <option value="Crater Lake Oregon">Crater Lake National Park</option>
+      <option value="Glacier National Park">Glacier National Park</option>
+      <option value="Grand Teton National Park">Grand Teton National Park</option>
+      <option value="Rainier National Park">Mount Rainier National Park</option>
+      <option value="north cascades national park">North Cascades National Park</option>
+      <option value="olympic national park">Olympic National Park</option>
+      <option value="Yellowstone National Park">Yellowstone National Park</option>
+    </select>
+    <br>
+    <b>End:</b>
+    <select id="endding">
+      <option value="Portland, OR">Portland, OR</option>
+      <option value="Seattle, WA">Seattle, WA</option>
+    </select>
+    <br>
+      <button type="submit" class="btn mapButton" id="submit">GO!</button>
+    </div>
+    <div id="directions-panel"></div>
   </div>
-  <div id="directions-panel"></div>
-</div>
+</body>

@@ -20,6 +20,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #D3D3D3;
 }
 
 #map {
@@ -42,4 +43,23 @@ html, body {
 #directions-panel {
   margin-top: 10px;
   padding: 10px;
+}
+
+.mapButton {
+  background-color: #D1692A;
+  border-radius: 30px;
+  height: 60px;
+  margin-top: 20px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+  font-size-adjust: auto;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+#start, #waypoints, #end {
+  font-family: 'Josefin Sans', sans-serif;
 }

@@ -3,7 +3,6 @@ import { Map } from './map.model';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Campground } from './campground.model';
-import { CAMPGROUNDS } from './mock-campgrounds';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
@@ -32,12 +31,10 @@ export class MapService {
           campData.FacilityName ,
           campData.FacilityDescription,
           campData.FacilityDirections,
-          campData.FacilityTypeDescription,
-          campData.FacilityLatitude,
-          campData.FacilityLongitude,
+          campData.FacilityTypeDescription
         ));
       }
-      this.campgrounds = newCampgrounds
+      this.campgrounds = newCampgrounds;
       return this.campgrounds;
     });
   }
