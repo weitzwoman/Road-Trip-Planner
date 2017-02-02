@@ -1,8 +1,14 @@
 <div class="middle">
-  <div *ngFor = "let campground of campgrounds" class="campgroundTile">
+  <div *ngFor = "let campground of campgrounds" class="campgroundTile" (click)="fullSquare()">
+    <!-- <span class="closeIt">X</span> -->
     <h3 class="name">{{campground.facilityName}}</h3>
-    <p [innerHtml]="campground.facilityDescription"></p>
-    <p [innerHtml]="campground.facilityDirections"></p>
-    <br><br>
+    <div class="spaceRegulator">
+      <div class="insideSpaceRegulator">
+        <div [innerHtml]="campground.facilityDescription" class="contentBox"></div>
+      </div>
+      <div class="insideSpaceRegulator">
+        <div [innerHtml]="campground.facilityDirections" class="contentBox"></div>
+      </div>
+    </div>
   </div>
 </div>

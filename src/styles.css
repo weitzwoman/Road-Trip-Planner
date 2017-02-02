@@ -47,7 +47,7 @@ html, body {
   background-image: url("https://images.unsplash.com/photo-1470074292333-06771ecb559e?dpr=2&auto=format&fit=crop&w=1199&h=1499&q=80&cs=tinysrgb&crop=");
   background-size: cover;
   background-position: center bottom;
-  height: 800px;
+  min-height: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -103,7 +103,8 @@ html, body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    width: 90%; }
+    width: 100%;
+    position: relative; }
     .content .top .choicesBox label {
       flex-basis: 20.3%;
       display: flex;
@@ -154,14 +155,60 @@ html, body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  transition: all 250ms ease-in-out; }
+  transition: all 250ms ease-in-out;
+  max-height: 1000px;
+  position: relative; }
   .content .middle p {
     font-family: 'Josefin Sans', sans-serif; }
   .content .middle h3 {
-    font-family: 'Alegreya Sans SC', sans-serif; }
+    font-family: 'Alegreya Sans SC', sans-serif;
+    align-self: center; }
   .content .middle .campgroundTile {
-    flex-basis: 20%; }
-    .content .middle .campgroundTile p {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 200px;
+    overflow: hidden;
+    transition: all 300ms ease-in-out; }
+    .content .middle .campgroundTile:hover {
+      box-shadow: inset 0px 0px 30px #cdb840; }
+    .content .middle .campgroundTile .contentBox {
       display: none; }
+    .content .middle .campgroundTile h2 {
+      color: orange; }
+    .content .middle .campgroundTile .spaceRegulator {
+      flex-basis: 90%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .content .middle .campgroundTile .spaceRegulator .insideSpaceRegulator {
+        flex-basis: 48%;
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; }
+
+.fillItPlease {
+  top: -1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5; }
+  .fillItPlease > h3 {
+    font-size: 3em; }
+  .fillItPlease .insideSpaceRegulator > div {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .fillItPlease .insideSpaceRegulator > div > * {
+      flex-basis: 50%; }
+
+.biggerMiddle {
+  height: 1000px; }
 
 /*# sourceMappingURL=styles.css.map */

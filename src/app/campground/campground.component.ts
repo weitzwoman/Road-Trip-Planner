@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { MapService } from '../map.service';
 import { Campground } from '../campground.model';
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 import { DomSanitizer, SafeResourceUrl, SafeHtml} from '@angular/platform-browser';
 import { HomeComponent } from '../home/home.component';
+// import $ from "@types/jquery";
+declare var $:any;
 
 @Component({
   selector: 'app-campground',
@@ -19,6 +21,7 @@ export class CampgroundComponent implements OnInit {
   @Output() showCampsSender = new EventEmitter();
   results;
   newCampground: Campground;
+
 
   constructor(private _sanitizer: DomSanitizer, private router: Router, private mapService: MapService) { }
 
@@ -34,6 +37,31 @@ export class CampgroundComponent implements OnInit {
   showCamps(lat, long) {
     let coords = {lat: lat, long: long}
     this.showCampsSender.emit(coords);
+  }
+
+  fullSquare() {
+    // var container: HTMLDivElement;
+    // container.style.position = "absolute";
+    // container.style.width = "100%";
+    // container.style.height = "100%";
+    // $(this).css({"color": "red"});
+    $(".campgroundTile").click(function() {
+      $(".campgroundTile").css({"display": "none"});
+      $(this).css({"display": "flex"});
+      $(this).addClass("fillItPlease");
+      $(".contentBox").css({"display": "flex"});
+      $(".middle").addClass("biggerMiddle");
+    });
+
+    // $(".closeIt").click(function() {
+    //   $(".campgroundTile").removeClass("fillItPlease");
+    // });
+    $(".fillItPlease").click(function() {
+      $(".campgroundTile").css({"display": "flex"});
+      $(".campgroundTile .contentBox").css({"display": "none"});
+      $(".campgroundTile").removeClass("fillItPlease");
+      $(".biggerMiddle").removeClass("biggerMiddle");
+    });
   }
 
 }
