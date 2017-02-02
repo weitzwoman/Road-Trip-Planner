@@ -46,21 +46,27 @@ export class CampgroundComponent implements OnInit {
     // container.style.height = "100%";
     // $(this).css({"color": "red"});
     $(".campgroundTile").click(function() {
+      $(this).attr('id', 'submit');
       $(".campgroundTile").css({"display": "none"});
       $(this).css({"display": "flex"});
       $(this).addClass("fillItPlease");
       $(".contentBox").css({"display": "flex"});
       $(".middle").addClass("biggerMiddle");
+      $(this).addClass("end");
+      $(".end option").attr('id', 'end');
     });
 
     // $(".closeIt").click(function() {
     //   $(".campgroundTile").removeClass("fillItPlease");
     // });
-    $(".fillItPlease").click(function() {
+    $(".fillItPlease").dblclick(function() {
       $(".campgroundTile").css({"display": "flex"});
       $(".campgroundTile .contentBox").css({"display": "none"});
       $(".campgroundTile").removeClass("fillItPlease");
       $(".biggerMiddle").removeClass("biggerMiddle");
+      $(".campgroundTile option").attr('id', '');
+      $(".end").removeClass("end");
+      $(".campgroundTile").attr('id', '');
     });
   }
 
