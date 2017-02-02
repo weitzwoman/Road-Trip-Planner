@@ -131,8 +131,16 @@ html, body {
         flex-wrap: wrap;
         justify-content: center;
         overflow: visible;
+        transition: margin 400ms ease-in-out;
         &:not(:first-of-type) {
         margin-left: -100px;
+        }
+        &:hover {
+          div{
+            box-shadow: 0px 0px 15px #fff;
+          }
+          margin-left: 10px;
+          margin-right: 110px;
         }
       }
       div {
@@ -147,13 +155,7 @@ html, body {
         background-position: center center;
         background-size: cover;
         box-shadow: -5px 5px 8px #333;
-        transition: margin 400ms ease-in-out;
 
-        &:hover {
-          box-shadow: 0px 0px 15px #fff;
-          margin-left: 110px;
-          margin-right: 110px;
-        }
         h2 {
           font-family: 'Alegreya Sans SC', sans-serif;
           font-size: 2.5em;
@@ -163,9 +165,7 @@ html, body {
           width: 90%;
           align-self: center;
         }
-        // h4 {
-        //   font-family: 'Josefin Sans', sans-serif;
-        // }
+
       }
       #glacier {
         background-image: url('https://static.pexels.com/photos/193636/pexels-photo-193636.jpeg');
@@ -181,6 +181,25 @@ html, body {
       }
       #rainier {
         background-image: url('http://cdn1.buuteeq.com/upload/21004/shutterstock_80423284.jpg.1920x1080_default.jpg');
+      }
+    }
+  }
+  .middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    p {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    h3 {
+      font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    .campgroundTile {
+      flex-basis: 20%;
+      p {
+        display: none;
       }
     }
   }

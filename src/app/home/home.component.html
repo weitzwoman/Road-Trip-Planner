@@ -23,13 +23,13 @@
           <h2>Yellowstone National Park</h2>
         </div>
       </label>
-      <label for="">
+      <label (click)="showCamps(48.4818468,-122.5627902)" for="">
         <input type="radio" name="name" value="48.4818468,-122.5627902" hidden>
         <div class="searchTypes" id="northCascades">
           <h2>North Cascades National Park</h2>
         </div>
       </label>
-      <label for="">
+      <label (click)="showCamps(46.8278107,-121.7964489)" for="">
         <input type="radio" name="name" value="46.8278107,-121.7964489" hidden>
         <div class="searchTypes" id="rainier">
           <h2>Mount Rainier National Park</h2>
@@ -37,7 +37,7 @@
       </label>
     </div>
   </div>
-  <div class="middle">
+  <div class="middleOnHome">
     <app-campground [campgrounds]="campgrounds" (showCampsSender)="handleShowCampSender($event)"></app-campground>
   </div>
 </div>
