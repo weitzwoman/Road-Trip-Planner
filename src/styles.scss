@@ -143,6 +143,21 @@ html, body {
           margin-left: 10px;
           margin-right: 260px;
         }
+        @media (max-width: 1193px) {
+          &:hover {
+            div{
+              box-shadow: 0px 0px 15px #fff;
+              z-index: 4;
+            }
+            margin-right: 0px;
+            margin-left: -1px;
+          }
+          &:hover:not(:first-of-type) {
+            margin-left: -250px;
+            margin-right: 0px;
+
+          }
+        }
       }
       div {
         flex-basis: 300px;
@@ -231,6 +246,9 @@ html, body {
       h2 {
         color: orange;
       }
+      p {
+        font-family: 'Josefin Sans', sans-serif;
+      }
       .spaceRegulator {
         flex-basis: 90%;
         display: flex;
@@ -291,6 +309,7 @@ html, body {
       flex-wrap: wrap;
       & > * {
         flex-basis: 50%;
+
       }
     }
   }

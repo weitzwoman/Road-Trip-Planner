@@ -57,9 +57,17 @@ html, body {
   font-size-adjust: auto;
   text-align: center;
   vertical-align: middle;
-
+  border: none;
 }
 
-#start, #waypoints, #end {
+.mapButton:active {
+  background-color: #F5B041;
+}
+
+.mapButton:focus {
+    outline:none;
+}
+
+#start, #waypoints, #endding {
   font-family: 'Josefin Sans', sans-serif;
 }

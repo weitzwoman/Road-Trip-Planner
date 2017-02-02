@@ -120,6 +120,16 @@ html, body {
         margin-right: 260px; }
         .content .top .choicesBox label:hover div {
           box-shadow: 0px 0px 15px #fff; }
+      @media (max-width: 1193px) {
+        .content .top .choicesBox label:hover {
+          margin-right: 0px;
+          margin-left: -1px; }
+          .content .top .choicesBox label:hover div {
+            box-shadow: 0px 0px 15px #fff;
+            z-index: 4; }
+        .content .top .choicesBox label:hover:not(:first-of-type) {
+          margin-left: -250px;
+          margin-right: 0px; } }
     .content .top .choicesBox div {
       flex-basis: 300px;
       width: 300px;
@@ -184,6 +194,8 @@ html, body {
       display: none; }
     .content .middle .campgroundTile h2 {
       color: orange; }
+    .content .middle .campgroundTile p {
+      font-family: 'Josefin Sans', sans-serif; }
     .content .middle .campgroundTile .spaceRegulator {
       flex-basis: 90%;
       display: flex;
