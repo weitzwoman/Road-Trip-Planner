@@ -3,7 +3,6 @@ import { Map } from './map.model';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Campground } from './campground.model';
-import { CAMPGROUNDS } from './mock-campgrounds';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
@@ -20,7 +19,6 @@ export class MapService {
   }
 
   loadCampgrounds(lat, long) {
-
     return this.http.get('https://ridb.recreation.gov/api/v1/facilities?latitude=' + lat  + '&longitude=' + long + '&limit=5&apikey=F682E4677D1E48E88F3062C39D598A67')
     .map(res => res.json())
     .subscribe(data => {
@@ -32,12 +30,10 @@ export class MapService {
           campData.FacilityName ,
           campData.FacilityDescription,
           campData.FacilityDirections,
-          campData.FacilityTypeDescription,
-          campData.FacilityLatitude,
-          campData.FacilityLongitude,
+          campData.FacilityTypeDescription
         ));
       }
-      this.campgrounds = newCampgrounds
+      this.campgrounds = newCampgrounds;
       return this.campgrounds;
     });
   }

@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { MapMainComponent } from './map-main/map-main.component';
 import { CampgroundComponent } from './campground/campground.component';
 import { HomeComponent } from './home/home.component';
-// import { masterGasApiConfig } from './api-keys';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +24,6 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpModule,
     routing
-    // AgmCoreModule.forRoot({
-    //   apiKey: masterGoogleMapsConfig,
-    // })
   ],
   providers: [],
   bootstrap: [AppComponent]

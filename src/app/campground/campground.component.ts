@@ -14,6 +14,7 @@ import { HomeComponent } from '../home/home.component';
   styleUrls: ['./campground.component.css'],
   providers: [MapService]
 })
+
 export class CampgroundComponent implements OnInit {
   @Input() campgrounds: Campground[];
   @Output() showCampsSender = new EventEmitter();
@@ -26,7 +27,6 @@ export class CampgroundComponent implements OnInit {
   }
 
   private _htmlProperty: string = '<input type="text" name="name">';
-
     public get htmlProperty() : SafeHtml {
        return this._sanitizer.bypassSecurityTrustHtml(this._htmlProperty);
     }
