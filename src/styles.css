@@ -192,6 +192,8 @@ html, body {
       box-shadow: inset 0px 0px 30px #cdb840; }
     .content .middle .campgroundTile .contentBox {
       display: none; }
+    .content .middle .campgroundTile .contentBox {
+      font-family: 'Josefin Sans', sans-serif !important; }
     .content .middle .campgroundTile h2 {
       color: orange; }
     .content .middle .campgroundTile p {

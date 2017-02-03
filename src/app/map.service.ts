@@ -28,7 +28,7 @@ export class MapService {
       for(var i=0; i<this.results.RECDATA.length; i++){
         let campData = this.results.RECDATA[i];
         newCampgrounds.push(new Campground(
-          campData.FacilityName ,
+          campData.FacilityName,
           campData.FacilityDescription,
           campData.FacilityDirections,
           campData.FacilityTypeDescription
